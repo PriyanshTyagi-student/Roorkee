@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Virtual Labs | Electrical Machines Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./alert-theme.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient { background: linear-gradient(120deg, #05264f, #0a4a91); }
+    .hero-card { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+    .section-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .section-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12); }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900">
+  <header class="hero-gradient text-white shadow-xl">
+    <div class="mx-auto max-w-6xl px-6 py-6 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div>
+        <div class="text-sm uppercase tracking-[0.28em] text-slate-200">Virtual Labs</div>
+        <h1 class="mt-4 text-4xl font-semibold md:text-5xl">Electrical Machines Lab</h1>
+        <p class="mt-4 max-w-2xl text-slate-200/90 text-lg leading-8">A self-contained lab template built with HTML, CSS, and JavaScript. Use this page as the landing entry point for your lab sections.</p>
+      </div>
+      <div class="rounded-3xl bg-white/10 p-5 shadow-[0_26px_50px_rgba(15,23,42,0.2)] backdrop-blur-xl">
+        <div class="text-sm uppercase tracking-[0.3em] text-slate-200/80">Quick start</div>
+        <div class="mt-4 space-y-3 text-base text-slate-100">
+          <p>Open any module below to navigate through the lab.</p>
+          <p class="text-slate-300">All pages are static and work in the browser only.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mx-auto max-w-6xl px-6 py-6">
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <a href="aim.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Aim</div>
+        <p class="mt-2 text-slate-600">Read the lab objective and understand the experiment purpose.</p>
+      </a>
+      <a href="theory.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Theory</div>
+        <p class="mt-2 text-slate-600">Explore the underlying electrical machine concepts and equations.</p>
+      </a>
+      <a href="pretest.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Pretest</div>
+        <p class="mt-2 text-slate-600">Assess your knowledge before the lab activity.</p>
+      </a>
+      <a href="procedure.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Procedure</div>
+        <p class="mt-2 text-slate-600">Follow the step-by-step experiment instructions.</p>
+      </a>
+      <a href="simulation.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Simulation</div>
+        <p class="mt-2 text-slate-600">Run the interactive lab simulation in the browser.</p>
+      </a>
+      <a href="posttest.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Posttest</div>
+        <p class="mt-2 text-slate-600">Complete the post-lab questions and check your results.</p>
+      </a>
+      <a href="references.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">References</div>
+        <p class="mt-2 text-slate-600">View the sources and additional reading materials.</p>
+      </a>
+      <a href="contributors.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Contributors</div>
+        <p class="mt-2 text-slate-600">See the team behind the virtual lab.</p>
+      </a>
+      <a href="progressreport.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">Progress Report</div>
+        <p class="mt-2 text-slate-600">Track your lab progress and generate reports.</p>
+      </a>
+      <a href="user_input.html?return=main.html" class="section-card rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm hover:border-blue-300">
+        <div class="text-xl font-semibold">User Input</div>
+        <p class="mt-2 text-slate-600">Enter your student details before starting the lab.</p>
+      </a>
+    </div>
+  </nav>
+
+  <section class="mx-auto max-w-6xl px-6 py-10">
+    <div class="rounded-[2rem] bg-white p-8 shadow-xl">
+      <h2 class="text-2xl font-semibold">How to use this lab</h2>
+      <ul class="mt-4 space-y-3 text-slate-700">
+        <li>1. Start with <strong>Aim</strong> and <strong>Theory</strong> to understand the experiment.</li>
+        <li>2. Complete the <strong>Pretest</strong> before doing the simulation.</li>
+        <li>3. Run the <strong>Simulation</strong> and follow the <strong>Procedure</strong>.</li>
+        <li>4. Finish with the <strong>Posttest</strong> and review your results.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="mx-auto max-w-6xl px-6 py-8 text-center text-sm text-slate-600">
+    <p>Built using only HTML, CSS, and JavaScript. No server code required.</p>
+  </footer>
+</body>
+</html>
