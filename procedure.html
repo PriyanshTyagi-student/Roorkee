@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Virtual Labs | Electrical Machines Lab - Procedure</title>
+  <title>Virtual Labs | Image Processing Lab - Procedure</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./alert-theme.css">
@@ -674,7 +674,7 @@
     <div class="header-inner px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-1 w-full">
         <!-- Logo Section - Absolute Left Corner -->
-        <a href="main.html" class="logo-container hover:no-underline focus:no-underline"> <!-- Made logo clickable -->
+        <a href="../../main.html" class="logo-container hover:no-underline focus:no-underline"> <!-- Made logo clickable -->
           <img 
            src="./images/image.png" 
             alt="Virtual Labs Logo" 
@@ -703,7 +703,7 @@
 
         <!-- Desktop Navigation (Optional) -->
          <nav class="top-nav hidden lg:flex items-center gap-2 lg:gap-3">
-            <a href="main.html" class="nav-link">Home</a>
+            <a href="../../main.html" class="nav-link">Home</a>
             <a href="user_input.html?return=procedure.html" class="nav-link nav-user-link" data-user-input-link data-redirect-return="procedure.html">
               <span class="nav-user-pill">
                
@@ -812,7 +812,7 @@
         <nav class="mb-6 text-sm sm:text-base text-gray-600 animate-slideInLeft flex flex-wrap items-center gap-x-2 gap-y-1">
         <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
         <span>></span>
-        <a href="#" class="hover:text-blue-600">Electrical Machines Lab</a>
+        <a href="#" class="hover:text-blue-600">Image Processing Lab</a>
         <span>></span>
         <span class="text-gray-800 font-medium">Procedure</span>
       </nav>
@@ -821,7 +821,7 @@
       <div class="vl-card mb-4 overflow-hidden animate-fadeInUp rounded-lg">
         <div class="px-4 py-3 flex items-center justify-start gap-4" style="background: linear-gradient(120deg, #021a2c, #064073, #0b60a8);">
           <h1 class="text-lg sm:text-xl font-bold text-white leading-snug">
-            To study the Load Characteristics of DC shunt generator
+            To demonstrate and understand image sampling and quantization
           </h1>
         </div>
       </div>
@@ -832,85 +832,57 @@
 
         <div class="procedure-body space-y-6 sm:space-y-8 text-gray-700 text-base sm:text-lg leading-relaxed">
 
-          <!-- Step 1: Connections -->
-         
-       
-
-   <p>
+          <p>
   <b>AI Guide:</b> To use this feature, click on the 
   <b>“AI Guide”</b> button. The AI Guide will assist you 
-  in performing the simulation accurately at each step.
+  in selecting sampling and quantization settings for the simulation.
 </p>
-     <p><strong>STEP 1:</strong> Make connections as per the instructions given below:</p>
+     <p><strong>STEP 1:</strong> Open the simulation page and review the source image and the output preview pane.</p>
       <div class="procedure-table-wrap rounded-lg shadow border border-gray-200">
           <table class="procedure-table w-full table-fixed divide-y divide-gray-200">
-            <caption class="sr-only">Connections mapping between 'From' and 'To' terminals</caption>
+            <caption class="sr-only">Experiment settings for image sampling and quantization</caption>
             <thead class="bg-gray-50">
               <tr>
-                <!-- first column (From) -->
-                <th class="sticky top-0 z-10 px-4 py-3 text-left text-sm font-semibold text-gray-700 bg-gray-50">
-                  From
-                </th>
-        
-                <!-- the rest of the header cells (short labels centered) -->
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">R</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">R</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">B</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">B</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">A2</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">L</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">F</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">A</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">L2</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">A4</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">Z4</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">I</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">J</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">H</th>
-                <th class="sticky top-0 z-10 px-3 py-3 text-center text-xs font-medium text-gray-600 uppercase">H</th>
+                <th class="sticky top-0 z-10 px-4 py-3 text-left text-sm font-semibold text-gray-700 bg-gray-50">Parameter</th>
+                <th class="sticky top-0 z-10 px-4 py-3 text-left text-sm font-semibold text-gray-700 bg-gray-50">Recommended Setting</th>
+                <th class="sticky top-0 z-10 px-4 py-3 text-left text-sm font-semibold text-gray-700 bg-gray-50">Purpose</th>
               </tr>
             </thead>
-        
             <tbody class="bg-white divide-y divide-gray-100 text-sm">
               <tr class="hover:bg-gray-50">
-                <td class="px-4 py-3 font-medium text-gray-800 bg-gray-50">To</td>
-                <td class="px-3 py-3 text-center">C</td>
-                <td class="px-3 py-3 text-center">E</td>
-                <td class="px-3 py-3 text-center">G</td>
-                <td class="px-3 py-3 text-center">A2</td>
-                <td class="px-3 py-3 text-center">Z2</td>
-                <td class="px-3 py-3 text-center">D</td>
-                <td class="px-3 py-3 text-center">Z1</td>
-                <td class="px-3 py-3 text-center">A1</td>
-                <td class="px-3 py-3 text-center">A4</td>
-                <td class="px-3 py-3 text-center">Z4</td>
-                <td class="px-3 py-3 text-center">K</td>
-                <td class="px-3 py-3 text-center">J</td>
-                <td class="px-3 py-3 text-center">L1</td>
-                <td class="px-3 py-3 text-center">A3</td>
-                <td class="px-3 py-3 text-center">Z3</td>
+                <td class="px-4 py-3 font-medium text-gray-800 bg-gray-50">Sampling Resolution</td>
+                <td class="px-4 py-3 text-gray-700">High, medium, low</td>
+                <td class="px-4 py-3 text-gray-700">Compare pixel density effects</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-800 bg-gray-50">Quantization Levels</td>
+                <td class="px-4 py-3 text-gray-700">256, 64, 16, 8</td>
+                <td class="px-4 py-3 text-gray-700">Observe tonal detail and posterization</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-800 bg-gray-50">Observation Notes</td>
+                <td class="px-4 py-3 text-gray-700">Record visual changes</td>
+                <td class="px-4 py-3 text-gray-700">Document experiment results</td>
               </tr>
             </tbody>
           </table>
         </div>
       <!-- keep the image but limit height and center it -->
       <div class="flex justify-center my-6 sm:my-8">
-        <img src="images/Procedure.png" alt="Correct Connections Diagram" class="procedure-image max-w-full h-auto rounded-lg shadow-lg">
+        <img src="images/Procedure.png" alt="Experiment illustration" class="procedure-image max-w-full h-auto rounded-lg shadow-lg">
       </div>
       
           <!-- Remaining Steps -->
           <div class="procedure-steps space-y-3 sm:space-y-4">
-            <p><b>Note:</b> Click on the <b>“Auto Connect”</b> button to make all the connections automatically.</p>
-           <p><strong>STEP 2:</strong> Click on <b>"Check"</b> button to check the connections.</p>
-           <p><strong>STEP 3:</strong>  If connections are correct, turn ON the MCB.</p>
-           <p><strong>STEP 4:</strong> Now, move the starter handle from left to right</p>
-           <p><strong>STEP 5:</strong> Select the No. of Bulbs from the Lamp Load.</p>
-           <p><strong>STEP 6:</strong> Click on <b>"Add To Table"</b> button to add readings to the Observation Table.</p>
-           <p><strong>STEP 7:</strong> Add different readings by increasing the Lamp Load.</p>
-           <p><strong>STEP 8:</strong> Click on <b>"Graph"</b> button to generate the graph.</p>
-           <p><strong>STEP 9:</strong> Click on <b>"Report"</b> button to view the report.</p>
-           <p><strong>STEP 10:</strong> Click on <b>"Print"</b> button to print the simulation.</p>
-           <p><strong>STEP 11:</strong> Click on <b>"Reset"</b> button to reset the simulation.</p>
+           <p><strong>STEP 2:</strong> Adjust the sampling resolution to begin with a high pixel count, then lower the resolution to observe how the image becomes blocky.</p>
+           <p><strong>STEP 3:</strong> Change the quantization level to compare 256, 64, 16, and 8 gray levels.</p>
+           <p><strong>STEP 4:</strong> Click on the simulation Control button to apply the selected sampling and quantization settings.</p>
+           <p><strong>STEP 5:</strong> Compare the processed output to the original image and note the visual differences.</p>
+           <p><strong>STEP 6:</strong> Record your observations in the table, noting the sampling resolution and quantization level used.</p>
+           <p><strong>STEP 7:</strong> Repeat the experiment with at least three different combinations of resolution and quantization.</p>
+           <p><strong>STEP 8:</strong> Observe artifacts such as pixelation, aliasing, and posterization as you change the settings.</p>
+           <p><strong>STEP 9:</strong> Use the report function if available to save your results and compare them.</p>
+           <p><strong>STEP 10:</strong> Reset the simulation between trials to start each new setting from a clean state.</p>
           </div>
 
         </div>

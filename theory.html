@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Virtual Labs | Electrical Machines Lab - Theory</title>
+  <title>Virtual Labs | Image Processing Lab - Theory</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./alert-theme.css">
@@ -584,7 +584,7 @@
     <div class="header-inner px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-1 w-full">
         <!-- Logo Section - Absolute Left Corner -->
-        <a href="main.html" class="logo-container hover:no-underline focus:no-underline"> <!-- Made logo clickable -->
+        <a href="../../main.html" class="logo-container hover:no-underline focus:no-underline"> <!-- Made logo clickable -->
           <img 
              src="./images/image.png" 
             alt="Virtual Labs Logo" 
@@ -613,7 +613,7 @@
 
         <!-- Desktop Navigation (Optional) -->
          <nav class="top-nav hidden lg:flex items-center gap-2 lg:gap-3">
-            <a href="main.html" class="nav-link">Home</a>
+            <a href="../../main.html" class="nav-link">Home</a>
             <a href="user_input.html?return=theory.html" class="nav-link nav-user-link" data-user-input-link data-redirect-return="theory.html">
               <span class="nav-user-pill">
                
@@ -717,7 +717,7 @@
       <nav class="mb-6 text-m text-gray-600 animate-slideInLeft flex items-center space-x-2">
         <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
         <span>></span>
-        <a href="#" class="hover:text-blue-600">Electrical Machines Lab</a>
+        <a href="#" class="hover:text-blue-600">Image Processing Lab</a>
         <span>></span>
         <span class="text-gray-800 font-medium">Theory</span>
       </nav>
@@ -726,7 +726,7 @@
       <div class="vl-card mb-4 overflow-hidden animate-fadeInUp rounded-lg">
         <div class="px-4 py-3" style="background: linear-gradient(120deg, #021a2c, #064073, #0b60a8);">
           <h1 class="text-lg md:text-xl font-bold text-white text-center leading-snug">
-            To study the Load Characteristics of DC shunt generator
+            To demonstrate and understand image sampling and quantization
           </h1>
         </div>
       </div>
@@ -736,106 +736,60 @@
 
   <div class="space-y-8 text-gray-700 text-lg leading-relaxed">
 
-    <!-- Introduction -->
     <div>
       <h3 class="text-xl font-semibold mb-4 text-gray-800">Introduction</h3>
       <p class="mb-6 text-justify">
-        A DC shunt generator is a type of self-excited DC generator in which the field winding is connected in parallel (shunt) with the armature winding. As a result, the field current remains almost constant (since it depends only on the terminal voltage). The yoke of a DC generator is made of cast iron because it provides high magnetic permeability, good mechanical strength, and serves as a low-reluctance path for the magnetic flux.
+        Digital image formation begins with sampling a continuous scene and quantizing each sample into a finite number of brightness values. Sampling determines the image resolution by choosing a grid of pixels, while quantization decides how many shades each pixel can represent.
       </p>
-
-      <p class="mb-6 text-justify">
-        The performance of a DC shunt generator is described using load characteristics, which illustrate how the terminal voltage and load current change as the load varies.
-      </p>
-
-      <p class="mb-6 text-justify">
-        In a shunt generator, the field winding is connected in parallel with the armature winding so that the terminal voltage of the generator is applied across it. The shunt field winding has many turns of fine wire having high resistance. Therefore, only a part of the armature current flows through the shunt field winding, and the rest flows through the load. Fig. 1 shows the connections of a shunt wound generator. The armature current I<sub>a</sub> splits into two parts — a small fraction I<sub>sh</sub> flowing through the shunt field winding, while the major part I<sub>L</sub> goes to the external load.
-      </p>
-
-      <div class="flex justify-center mb-4">
-        <img src="./images/DCS-01.png" alt="Equivalent circuit of DC shunt generator for load characteristics" class="w-[500px] h-[250px] rounded-lg shadow-md">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-gray-200 bg-slate-50 p-5">
+          <h4 class="text-lg font-semibold text-gray-800 mb-3">Sampling</h4>
+          <p class="text-gray-700">
+            Sampling divides the continuous image into a regular grid of discrete pixels. A higher sampling rate captures more detail and produces smaller pixels, while a lower sampling rate creates larger pixels and a blockier appearance.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-slate-50 p-5">
+          <h4 class="text-lg font-semibold text-gray-800 mb-3">Quantization</h4>
+          <p class="text-gray-700">
+            Quantization maps each sampled value to one of a limited set of intensity levels. Reducing the number of levels makes the image appear posterized, while increasing the levels preserves smoother tonal transitions.
+          </p>
+        </div>
       </div>
-      <p class="text-center font-semibold text-gray-800">
-        <b>Fig. 1 Equivalent circuit of DC shunt generator for load characteristics</b>
-      </p>
     </div>
 
-    <!-- Losses -->
     <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Losses in a DC Shunt Generator</h3>
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Sampling Rate and Spatial Resolution</h3>
       <p class="mb-6 text-justify">
-        In a DC shunt generator, various losses occur during operation, such as armature copper losses, shunt field copper losses, iron losses, and mechanical losses. Among these, armature copper losses constitute a significant portion of the total losses. The copper losses in the armature of a DC shunt generator are approximately 30% of the total full-load losses. These losses occur due to the resistance of the armature winding and increase with load current, thereby affecting the efficiency and voltage regulation of the generator.
+        The sampling rate is the number of pixels used to represent the image in the horizontal and vertical directions. It determines how much spatial detail the digital image retains. If the sampling rate is too low, the image may lose fine features and exhibit aliasing artifacts.
       </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>High sampling rate: smaller pixels, more accurate detail, and smoother edges.</li>
+        <li>Low sampling rate: larger pixels, coarse detail, and visible pixelation.</li>
+      </ul>
     </div>
 
-    <!-- Types of Characteristics -->
     <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Types of Characteristics</h3>
-      <p class="mb-4">
-        There are two main characteristics of a DC shunt generator:
-      </p>
-
-      <h4 class="text-lg font-semibold mb-2 text-gray-800">1. Internal Characteristic</h4>
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Gray-Level Quantization</h3>
       <p class="mb-6 text-justify">
-        The internal characteristic curve represents the relation between the generated voltage (E<sub>g</sub>) and the load current I<sub>L</sub>. When the generator is loaded, the generated voltage decreases due to armature reaction. Therefore, the generated voltage will be lower than the emf generated at no load. In Fig. 2, the AD curve shows the no-load voltage curve, and AB represents the internal characteristic curve.
+        Quantization assigns each sampled pixel an intensity from a finite set of levels. For a grayscale image, an 8-bit quantizer produces 256 levels from black to white. If the number of levels is reduced, the image may show visible bands of uniform tone.
       </p>
-
-      <h4 class="text-lg font-semibold mb-2 text-gray-800">2. External or Load Characteristic</h4>
-      <p class="mb-4 text-justify">
-        The external characteristic of a DC shunt generator represents the relationship between the terminal voltage (V) and the load current (I<sub>L</sub>) while the generator is supplying power. It shows how the terminal voltage varies with changes in the load.
-      </p>
-
-      <p class="mb-4 text-justify">
-        This characteristic is typically represented by a V–I<sub>L</sub> graph. In Fig. 2, the AC curve represents the external characteristic of the DC shunt generator. Due to the ohmic drop in the armature resistance, the terminal voltage is lower than the generated voltage. Therefore, the external characteristic curve lies below the internal characteristic curve.
-      </p>
-
       <div class="text-center text-lg font-mono my-6 bg-gray-100 p-4 rounded-lg">
-        V = (E<sub>g</sub> − I<sub>a</sub>R<sub>a</sub>) = E<sub>g</sub> − (I<sub>L</sub> + I<sub>sh</sub>)R<sub>a</sub>
+        Quantized value = round(original_value × (L − 1)) / (L − 1)
       </div>
-
-      <p class="mb-2"><strong>Where,</strong></p>
-      <ul class="list-disc pl-6 mb-6 space-y-1">
-        <li>V is the terminal voltage of the generator</li>
-        <li>E<sub>g</sub> is the generated emf in the armature</li>
-        <li>I<sub>a</sub> is armature current and R<sub>a</sub> is armature resistance</li>
-        <li>I<sub>sh</sub> is the current flowing through the shunt field winding</li>
-        <li>I<sub>L</sub> is the load current delivered to the external load</li>
-      </ul>
-
-      <div class="flex justify-center mb-4">
-        <img src="./images/DCS-02.png" alt="Load characteristics of DC shunt generator" class="w-[500px] h-[250px] rounded-lg shadow-md">
-      </div>
-      <p class="text-center font-semibold text-gray-800">
-        <b>Fig. 2 Characteristics of DC shunt generator</b>
-      </p>
-    </div>
-
-    <!-- Behaviour -->
-    <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Behaviour of External Characteristics</h3>
       <p class="mb-6 text-justify">
-        When the load resistance of a DC shunt generator decreases, the load current (I<sub>L</sub>) increases. However, this increase is limited only up to point C, known as the breakdown point. Beyond this point, a further decrease in load resistance causes a decrease in load current, and the external characteristic curve reverses (shown by the dotted line). Eventually, the terminal voltage may drop to zero except for a small value due to residual magnetism. The point at which the generator delivers maximum current is called the breakdown point.
+        Here, L is the number of quantization levels. More levels preserve detail, while fewer levels cause tonal distortion and posterization.
       </p>
     </div>
 
-    <!-- Advantages -->
     <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Advantages</h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Provides nearly constant terminal voltage under light to medium load.</li>
-        <li>Stable operation within a certain load range.</li>
-        <li>Suitable for battery charging, lighting, and excitation purposes where steady voltage is required.</li>
-        <li>Simple voltage control by adjusting the field current.</li>
-      </ul>
-    </div>
-
-    <!-- Disadvantages -->
-    <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Disadvantages</h3>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Poor voltage regulation at high load current.</li>
-        <li>Stability decreases with decreasing load resistance.</li>
-        <li>Depends on residual magnetism for initial voltage build-up.</li>
-        <li>Breakdown point limitation: beyond a certain load current, the characteristic curve reverses.</li>
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Effects on Image Quality</h3>
+      <p class="mb-6 text-justify">
+        The combination of sampling and quantization determines how faithfully the digital image represents the original scene. Both processes affect the final image quality and storage requirements.
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Sampling artifacts appear as jagged edges, missing detail, or aliasing when the resolution is too low.</li>
+        <li>Quantization artifacts appear as visible steps or bands in smooth gradients when the level count is too low.</li>
+        <li>A balanced design uses enough samples and levels to represent the image accurately while minimizing data size.</li>
       </ul>
     </div>
 

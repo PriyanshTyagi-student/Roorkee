@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Virtual Labs | Electrical Machines Lab - Posttest</title>
+  <title>Virtual Labs | Image Processing Lab - Posttest</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./alert-theme.css">
@@ -601,7 +601,7 @@
   <header class="vl-header shadow-xl fixed top-0 left-0 right-0 z-50">
     <div class="header-inner px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-1 w-full gap-3">
-        <a href="main.html" class="logo-container hover:no-underline focus:no-underline">
+        <a href="../../main.html" class="logo-container hover:no-underline focus:no-underline">
           <img 
              src="./images/image.png" 
             alt="Virtual Labs Logo" 
@@ -627,7 +627,7 @@
         </button>
 
         <nav class="top-nav hidden lg:flex items-center gap-2 lg:gap-3">
-          <a href="main.html" class="nav-link">Home</a>
+          <a href="../../main.html" class="nav-link">Home</a>
           <a href="user_input.html?return=posttest.html" class="nav-link nav-user-link" data-user-input-link data-redirect-return="posttest.html">
             <span class="nav-user-pill">
              
@@ -725,7 +725,7 @@
       <nav class="mb-6 text-sm text-gray-600 animate-slideInLeft flex items-center space-x-2">
         <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
         <span>></span>
-        <a href="#" class="hover:text-blue-600">Electrical Machines Lab</a>
+        <a href="#" class="hover:text-blue-600">Image Processing Lab</a>
         <span>></span>
         <span class="text-gray-800 font-medium">Posttest</span>
       </nav>
@@ -733,7 +733,7 @@
       <div class="vl-card mb-4 overflow-hidden animate-fadeInUp rounded-lg">
         <div class="px-4 py-3" style="background: linear-gradient(120deg, #021a2c, #064073, #0b60a8);">
           <h1 class="text-lg md:text-xl font-bold text-white text-center leading-snug">
-            To study the Load Characteristics of DC shunt generator
+            To demonstrate and understand image sampling and quantization
           </h1>
         </div>
       </div>
@@ -812,26 +812,26 @@
 <script>
 /* ------------------ 20 QUESTIONS ------------------ */
 const questions = [
-  {id:1,text:'Armature magnetic field in a DC generator produces which of the following effect?',choices:['A: It demagnetizes or reduces the main flux','B: It cross-magnetizes the main flux','C: It magnetizes or reinforces the main flux','D: Both (a) and (b)'],answer:'D',selected:null},
-  {id:2,text:'Copper losses in the armature of the DC shunt generator amount to which of the following percentages of full load losses? ',choices:['A: 5 to 10%','B: 10 to 20%','C: 20 to 30%','D: 30 to 40%'],answer:'C',selected:null},
-  {id:3,text:'In a DC generator, compared to the air gap under field poles, the interpole air gap is made:',choices:['A: Larger','B: Smaller','C: The same','D: Much smaller'],answer:'A',selected:null},
-  {id:4,text:'If the field current of a DC shunt generator is slightly reduced during operation, the terminal voltage will:',choices:['A:  Increase sharply','B: Decrease gradually','C: Remain unchanged','D: Become zero'],answer:'B',selected:null},
-  {id:5,text:'The yoke of a DC generator is made of cast iron because:',choices:['A: It is cheaper','B: It completes the magnetic path','C: It gives mechanical protection','D: All of these'],answer:'D',selected:null},
-  {id:6,text:'What happens to the terminal voltage of a DC shunt generator as load increases?',choices:['A: It increases','B: It decreases','C: It remains constant','D: It first increases then decreases'],answer:'B',selected:null},
-  {id:7,text:'The main reason for the drop in terminal voltage under load is:',choices:['A: Armature resistance drop and armature reaction','B: Decrease in field resistance','C: Increase in field current','D: Decrease in speed'],answer:'A',selected:null},
-  {id:8,text:'What does the external characteristic curve of a DC shunt generator represent?',choices:['A: E vs Ia','B: V vs IL','C: E vs If','D: V vs N'],answer:'B',selected:null},
-  {id:9,text:'If the terminal voltage of the generator falls sharply with increasing load, it indicates:',choices:['A: High armature resistance','B: Poor voltage regulation','C: Weak residual magnetism','D: Low field current'],answer:'B',selected:null},
-  {id:10,text:'How can the voltage regulation of a DC shunt generator be improved?',choices:['A: By increasing armature resistance','B: By increasing field excitation','C: By reducing field current','D: By increasing speed'],answer:'B',selected:null},
-  {id:11,text:'In a well-designed DC shunt generator, the voltage drop from no-load to full-load is typically:',choices:['A: Negligible','B: Around 5–10%','C: 30–40%','D: 50–60%'],answer:'B',selected:null},
-  {id:12,text:'During the experiment, the load on the DC shunt generator is varied by:',choices:['A: Changing the armature speed','B: Adjusting field rheostat','C: Varying the load resistance across armature','D: Changing supply voltage'],answer:'C',selected:null},
-  {id:13,text:'The reason for using a shunt field regulator in the experiment is to:',choices:['A: Protect the generator','B: Vary the excitation current','C: Maintain constant load','D: Reduce armature reaction'],answer:'B',selected:null},
-  {id:14,text:'When load increases, armature current increases. This causes:',choices:['A: More voltage drop across armature resistance','B: More field flux','C: Less terminal current','D: Constant emf'],answer:'A',selected:null},
-  {id:15,text:'The generated emf in the generator is directly proportional to:',choices:['A: Load current','B: Armature resistance','C: Speed and field flux','D: Terminal voltage'],answer:'C',selected:null},
-  {id:16,text:'In the experiment, the field current is kept constant to obtain:',choices:['A: Open circuit characteristics','B: Load characteristics','C: Internal characteristics','D: Magnetization curve'],answer:'B',selected:null},
-  {id:17,text:'The curve plotted between terminal voltage and load current is generally:',choices:['A: Straight line','B: Slightly drooping curve','C: Parabolic','D: Exponential'],answer:'B',selected:null},
-  {id:18,text:'In the experiment, if the speed of the generator fluctuates, it will:',choices:['A: Have no effect on voltage','B: Cause incorrect load characteristics','C: Reduce field resistance','D: Increase copper loss'],answer:'B',selected:null},
-  {id:19,text:'The load characteristics help determine:',choices:['A: Efficiency and voltage regulation','B: Field winding design','C: Commutator dimensions','D: Mechanical losses'],answer:'A',selected:null},
-  {id:20,text:'Which safety precaution is essential while performing this experiment?',choices:['A: Start without excitation','B: Never exceed rated load current','C: Disconnect load suddenly','D: Operate at maximum speed'],answer:'B',selected:null},
+  {id:1,text:'When sampling is doubled in both directions, the total pixel count becomes:',choices:['A: twice','B: four times','C: eight times','D: unchanged'],answer:'B',selected:null},
+  {id:2,text:'Which quantization level is least likely to produce banding?',choices:['A: 16','B: 32','C: 64','D: 256'],answer:'D',selected:null},
+  {id:3,text:'An image with low sampling rate and high quantization levels is likely:',choices:['A: blurry and banded','B: blocky but smooth-toned','C: sharp and noisy','D: high resolution'],answer:'B',selected:null},
+  {id:4,text:'1-bit grayscale quantization produces:',choices:['A: black and white only','B: 4 gray levels','C: 8 gray levels','D: 16 gray levels'],answer:'A',selected:null},
+  {id:5,text:'Spatial resolution is most closely related to:',choices:['A: pixel count','B: brightness','C: color depth','D: contrast'],answer:'A',selected:null},
+  {id:6,text:'Which component does quantization directly affect?',choices:['A: pixel layout','B: intensity levels','C: sampling grid','D: file format'],answer:'B',selected:null},
+  {id:7,text:'Converting 256 gray levels to 8 levels increases:',choices:['A: detail','B: noise','C: banding','D: saturation'],answer:'C',selected:null},
+  {id:8,text:'Sampling below the Nyquist rate in images causes:',choices:['A: aliasing','B: posterization','C: dithering','D: compression artifacts'],answer:'A',selected:null},
+  {id:9,text:'Doubling the horizontal and vertical sampling resolution makes the image:',choices:['A: 2× bigger','B: 4× bigger','C: 8× bigger','D: unchanged'],answer:'B',selected:null},
+  {id:10,text:'Increasing sampling with fixed quantization levels typically:',choices:['A: improves detail and smoothness','B: improves detail but tonal steps remain','C: worsens image','D: reduces resolution'],answer:'B',selected:null},
+  {id:11,text:'Higher quantization depth results in:',choices:['A: fewer tones','B: smoother gradients','C: lower contrast','D: smaller file size'],answer:'B',selected:null},
+  {id:12,text:'Lower sampling density usually yields a:',choices:['A: smoother image','B: sharper image','C: blocky image','D: more accurate image'],answer:'C',selected:null},
+  {id:13,text:'The first step in digitizing an image is:',choices:['A: compression','B: quantization','C: sampling','D: color correction'],answer:'C',selected:null},
+  {id:14,text:'A 4-bit image can represent how many distinct brightness levels?',choices:['A: 4','B: 8','C: 16','D: 32'],answer:'C',selected:null},
+  {id:15,text:'To reduce visible bands in a gradient, you should:',choices:['A: decrease sampling','B: increase quantization levels','C: lower contrast','D: use fewer pixels'],answer:'B',selected:null},
+  {id:16,text:'Visible steps in a smooth gradient are called:',choices:['A: aliasing','B: banding','C: moiré','D: dithering'],answer:'B',selected:null},
+  {id:17,text:'A pixel represents a:',choices:['A: single sample value','B: color histogram','C: compression ratio','D: file header'],answer:'A',selected:null},
+  {id:18,text:'Higher bit-depth in imaging uses more:',choices:['A: spatial samples','B: quantization levels','C: edges','D: metadata'],answer:'B',selected:null},
+  {id:19,text:'Sampling and quantization are both necessary to convert:',choices:['A: digital to analog','B: analog to digital','C: JPEG to PNG','D: color to grayscale'],answer:'B',selected:null},
+  {id:20,text:'The primary result of this experiment is:',choices:['A: an analog signal','B: a printed photograph','C: a digital image','D: a color palette'],answer:'C',selected:null},
 ];
 
 /* ------------------ SETTINGS ------------------ */

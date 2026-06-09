@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Virtual Labs | Electrical Machines Lab - Progress Report</title>
+  <title>Virtual Labs | Image Processing Lab - Progress Report</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script
@@ -330,7 +330,7 @@
   <header class="vl-header relative z-20">
     <div class="header-inner px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-1 w-full gap-3">
-        <a href="main.html" class="logo-container hover:no-underline focus:no-underline">
+        <a href="../../main.html" class="logo-container hover:no-underline focus:no-underline">
           <div class="flex items-center gap-2">
             
             <img
@@ -352,7 +352,7 @@
         </button>
 
         <nav class="top-nav hidden lg:flex items-center gap-2 lg:gap-3">
-          <a href="main.html" class="nav-link">Home</a>
+          <a href="../../main.html" class="nav-link">Home</a>
           <a href="user_input.html?return=progressreport.html" class="nav-link nav-user-link" data-user-input-link data-redirect-return="progressreport.html">
             <span class="nav-user-pill">
               
@@ -1003,32 +1003,10 @@
       if (!html || typeof html !== "string") return html;
 
       return html
-        .replace(/(<\/(?:span|strong|b|em)>)(?=[A-Za-z0-9])/g, "$1 ")
+        .replace(/(<\/(:?span|strong|b|em)>)(?=[A-Za-z0-9])/g, "$1 ")
         .replace(/text-align\s*:\s*justify\s*;?/gi, "text-align:left;")
-        .replace(
-          /<p><span class="label">Experiment Title:<\/span>\s*To study the Load Characteristics of DC shunt generator<\/p>/g,
-          '<p><span class="label">Experiment Title:</span> To Study the Load Characteristics of a DC Shunt Generator</p>'
-        )
-        .replace(
-          /<p style="text-align:left;">To study the external characteristic of a DC shunt generator by varying the lamp load, measuring the terminal voltage and load current, and plotting the terminal voltage versus load current [^<]* curve\.<\/p>/g,
-          '<p style="text-align:left;">To study the load characteristics of a DC shunt generator by varying the lamp load, measuring terminal voltage and load current, and plotting the V-I characteristic curve.</p>'
-        )
-        .replace(
-          /<p style="text-align:left;">Connections were completed as instructed, supply was switched ON, lamp load was varied, and the corresponding load current and terminal voltage readings were recorded, and a graph was generated between terminal voltage and load current\.<\/p>/g,
-          '<p style="text-align:left;">The circuit connections were completed as per the procedure. The supply was switched on, the lamp load was varied step by step, the corresponding load current and terminal voltage readings were recorded, and the load characteristic graph was plotted.</p>'
-        )
-        .replace(
-          /<h3>Components and key Parameters<\/h3>/g,
-          '<h3>Components and Key Parameters</h3>'
-        )
-        .replace(
-          /<li>3-Point Starter: 220V DC, 7\.5 HP<\/li>/g,
-          '<li>3-Point Starter: 220 V DC, 7.5 HP</li>'
-        )
-        .replace(
-          /<li>Bulbs: 10 [^<]* 200 W each<\/li>/g,
-          '<li>Bulbs: 10 x 200 W each</li>'
-        );
+        .replace(/To study the Load Characteristics of DC shunt generator/gi, "To demonstrate and understand image sampling and quantization")
+        .replace(/To study the external characteristic of a DC shunt generator[\s\S]*?plotting the terminal voltage versus load current[^<]*/gi, "To demonstrate image sampling and quantization by varying resolution and gray-level depth, observing how the output changes as the pixel grid and intensity levels change.");
     }
 
     function getSimulationReportData() {

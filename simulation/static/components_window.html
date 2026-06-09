@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Labs | Electrical Machines Lab - Components Window</title>
+    <title>Virtual Labs | Image Processing Lab - Components Window</title>
     <style>
         * {
             box-sizing: border-box;
@@ -560,82 +560,40 @@
 
         const components = [
             {
-                key: "mcb",
-                name: "MCB",
-                image: "../images/Components/mcb-on.png",
-                description:
-                    "An MCB (Miniature Circuit Breaker) is an automatically operated electrical switching device used to protect an electrical circuit from overcurrent, short circuit, or excessive load. It acts as a safety device and disconnects the circuit when abnormal conditions occur.",
-                audio: "../audio/mcb.wav"
+                key: "source-image",
+                name: "Source Image",
+                image: "../images/image.png",
+                description: "A synthetic test pattern used as the input for sampling and quantization. Typical patterns include gradients and checkerboards to reveal sampling effects.",
+                audio: ""
             },
             {
-                key: "starter",
-                name: "3-Point Starter",
-                image: "../images/Components/Starter.png",
-                description:
-                    "A 3-point starter is a device used to safely start DC shunt and compound motors. It limits the starting current and provides overload protection to the motor. It ensures smooth acceleration by gradually reducing resistance as the motor gains speed, providing a safe start.",
-                audio: "../audio/3pointstarter.wav"
+                key: "source-canvas",
+                name: "Source Canvas",
+                image: "../images/Component-info.png",
+                description: "Displays the original image at full resolution before sampling is applied.",
+                audio: ""
             },
             {
-                key: "shuntmotor",
-                name: "DC Shunt Motor",
-                image: "../images/Components/shuntmotor.png",
-                description:
-                    "In this experiment, the DC shunt motor acts as a prime mover, converting electrical energy into mechanical energy. Its shaft is mechanically coupled to the DC shunt generator, and it receives the supply through the MCB and starter.",
-                audio: "../audio/dcMotor.wav"
+                key: "output-canvas",
+                name: "Output Canvas",
+                image: "../images/Components/Component-info.png",
+                description: "Shows the sampled and quantized output where each cell represents a sampled value that has been quantized to the selected gray levels.",
+                audio: ""
             },
             {
-                key: "generator",
-                name: "DC Shunt Generator",
-                image: "../images/Components/DC-Shunt-Generator.png",
-                description:
-                    "The DC shunt generator converts the mechanical energy received from the motor into electrical energy, producing DC output voltage and current, which is then supplied to the lamp load, while its terminals are connected to an ammeter in series and a voltmeter in parallel for measurement.",
-                audio: "../audio/dcShuntGenerator.wav"
-            },
-            
-            {
-                key: "lampboard",
-                name: "Lamp Load",
-                image: "../images/Components/LampBoard.png",
-                description:
-                    "A lamp load is used as a variable resistive load to study the load characteristics of a DC shunt generator. It helps in observing how the terminal voltage varies with the load current.",
-                audio: "../audio/lampLoad.wav"
-            },
-            
-            {
-                key: "ammeter",
-                name: "DC Ammeter 1",
-                image: "../images/Components/ammeter.png",
-                description:
-                    "This ammeter is connected in series with the DC shunt motor. Its purpose is to measure the current drawn by the DC shunt motor while it is operating.",
-                audio: "../audio/ammeter1.wav"
+                key: "sampling-grid",
+                name: "Sampling Grid",
+                image: "../images/Component-info.png",
+                description: "Visual overlay indicating the sampling cells. The sample size determines the spatial resolution of sampling.",
+                audio: ""
             },
             {
-                key: "voltmeter",
-                name: "DC Voltmeter 1",
-                image: "../images/Components/voltmeter.png",
-                description:
-                    "It is connected in parallel across the MCB. The purpose of this voltmeter is to measure the voltage of the main supply.",
-                audio: "../audio/voltmeter1.wav"
-            },
-            {
-                key: "ammeter",
-                name: "DC Ammeter 2",
-                image: "../images/Components/ammeter.png",
-                description:
-                    "It is connected in series with the lamp load to measure the load current (IL) delivered by the DC shunt generator.",
-                audio: "../audio/ammeter2.wav"
-            },
-            {
-                key: "voltmeter",
-                name: "DC Voltmeter 2",
-                image: "../images/Components/voltmeter.png",
-                description:
-                    "It is connected in parallel across the generator terminals to measure the terminal voltage (V) of the DC shunt generator.",
-                audio: "../audio/voltmeter2.wav"
-            },
-            
-           
-          
+                key: "quantizer",
+                name: "Quantizer",
+                image: "../images/Component-info.png",
+                description: "The gray-level quantizer reduces the number of distinct gray levels used to represent each sample. Fewer levels produce more posterization.",
+                audio: ""
+            }
         ];
 
         const thumbsEl = document.getElementById("componentThumbs");

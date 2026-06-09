@@ -12,55 +12,36 @@
 
       const tooltips = [
         {
-          id: "mcb",
-          selector: ".mcb-toggle, .mcb-block img",
-          text: "Purpose: To ensure the safety of equipment and users by tripping during electrical faults."
+          id: "source-canvas",
+          selector: "#sourceCanvas",
+          text: "Source Canvas: Displays the input image or test pattern used for sampling and quantization."
         },
         {
-          id: "starter",
-          selector: ".starter-body, .starter-handle",
-        text: "Purpose: Limits the starting current of a DC motor by using external armature resistance, which is cut out as the motor speeds up, and provides overload and no-voltage protection. \n\n Ratings: Voltage - 220V DC, 7.5 HP"
-      },
-      {
-        id: "lamp-load",
-        selector: ".lamp-bulb",
-        text: "Purpose: It helps in observing how the terminal voltage varies with the load current. \n\n Ratings: 2 kW (Each bulb has a rating of 200 W)."
-      },
-      {
-        id: "ammeter-1",
-        selector: ".meter-card:nth-of-type(1) > img",
-        text: "Purpose: To measure the current drawn by the DC shunt motor during operation."
-      },
-      {
-        id: "voltmeter-1",
-        selector: ".meter-card:nth-of-type(2) > img",
-        text: "Purpose:  To measure the voltage of the main supply."
-      },
-      {
-        id: "ammeter-2",
-        selector: ".meter-card:nth-of-type(3) > img",
-        text: "Purpose:  To measure the load current (IL) delivered by the DC shunt generator."
-      },
-      {
-        id: "voltmeter-2",
-        selector: ".meter-card:nth-of-type(4) > img",
-        text: "Purpose: It is connected in parallel across the generator terminals to measure the terminal voltage (V) of the DC shunt generator."
-      },
-       {
-        id: "dc-motor",
-        selector: ".motor-box > img",
-        text: "Purpose: It acts as a prime mover, converting electrical energy into mechanical energy to drive the DC shunt generator. \n\n Ratings: 5HP, Voltage - 220 V DC, Max. Current - 19 A, Speed - 1500 RPM Winding Type - Shunt"
-      },
-      {
-        id: "coupler",
-        selector: ".coupler > img",
-        text: "Purpose: The shaft is used to mechanically couple the DC shunt motor with the DC shunt generator."
-      },
-      {
-        id: "dc-generator",
-        selector: ".generator-body, .generator-rotor",
-        text: "Purpose: It converts the mechanical energy received from the motor into electrical energy and supplies power to the load for studying the load characteristics of a DC shunt generator. \n\n Ratings:  3 kW, Voltage - 220 V DC, Max. Current - 13.6 A, Speed - 1500 RPM" 
-      },
+          id: "output-canvas",
+          selector: "#outputCanvas",
+          text: "Output Canvas: Shows the sampled and quantized result — each cell represents one sample value after quantization."
+        },
+        {
+          id: "sample-size",
+          selector: "#sampleSize",
+          text: "Sample Size: Controls the spatial sampling resolution. Smaller values preserve more detail; larger values produce blockier sampling."
+        },
+        {
+          id: "quant-levels",
+          selector: "#quantLevels",
+          text: "Quantization Levels: Number of gray levels used to represent each sampled value. Fewer levels increase quantization error and posterization."
+        },
+        {
+          id: "apply-btn",
+          selector: "#applyBtn",
+          text: "Apply: Runs the sampling and quantization with current settings and updates the output canvas."
+        },
+        {
+          id: "save-report",
+          selector: "#saveReportBtn",
+          text: "Save Report: Saves a snapshot of the current simulation output into the progress report system."
+        }
+      ];
       // {
       //   id: "output-graph",
       //   selector: ".graph-section, #graphPlot, #graphBars",

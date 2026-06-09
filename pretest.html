@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Virtual Labs | Electrical Machines Lab - Pretest</title>
+  <title>Virtual Labs | Image Processing Lab - Pretest</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./alert-theme.css">
@@ -601,7 +601,7 @@
   <header class="vl-header shadow-xl fixed top-0 left-0 right-0 z-50">
     <div class="header-inner px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-1 w-full gap-3">
-        <a href="main.html" class="logo-container hover:no-underline focus:no-underline">
+        <a href="../../main.html" class="logo-container hover:no-underline focus:no-underline">
           <img 
             src="./images/image.png" 
             alt="Virtual Labs Logo" 
@@ -627,7 +627,7 @@
         </button>
 
         <nav class="top-nav hidden lg:flex items-center gap-2 lg:gap-3">
-          <a href="main.html" class="nav-link">Home</a>
+          <a href="../../main.html" class="nav-link">Home</a>
           <a href="user_input.html?return=pretest.html" class="nav-link nav-user-link" data-user-input-link data-redirect-return="pretest.html">
             <span class="nav-user-pill">
           
@@ -725,7 +725,7 @@
       <nav class="mb-6 text-sm text-gray-600 animate-slideInLeft flex items-center space-x-2">
         <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
         <span>></span>
-        <a href="#" class="hover:text-blue-600">Electrical Machines Lab</a>
+        <a href="#" class="hover:text-blue-600">Image Processing Lab</a>
         <span>></span>
         <span class="text-gray-800 font-medium">Pretest</span>
       </nav>
@@ -733,7 +733,7 @@
       <div class="vl-card mb-4 overflow-hidden animate-fadeInUp rounded-lg">
         <div class="px-4 py-3" style="background: linear-gradient(120deg, #021a2c, #064073, #0b60a8);">
           <h1 class="text-lg md:text-xl font-bold text-white text-center leading-snug">
-            To study the Load Characteristics of DC shunt generator
+            To demonstrate and understand image sampling and quantization
           </h1>
         </div>
       </div>
@@ -810,26 +810,26 @@
 <script>
 /* ------------------ 20 QUESTIONS ------------------ */
  const questions = [
-  {id:1,text:'DC shunt generator has terminal voltage versus load current characteristic which is',choices:['A. Constant','B. Slightly drooping','C. Slightly rising','D. Highly drooping'],answer:'B',selected:null},
-  {id:2,text:'Which dc generator gives constant output voltage at all loads?',choices:['A. Shunt generator','B. Series generator','C. Short shunt compound generator','D. Level compound generator'],answer:'D',selected:null},
-  {id:3,text:'In a DC shunt generator, the shunt field current mainly depends on:',choices:['A. Load current','B. Terminal voltage','C. Armature resistance','D. Speed only'],answer:'B',selected:null},
-  {id:4,text:'When a DC shunt generator is loaded, which loss increases significantly with load current?',choices:['A. Iron loss','B. Mechanical loss','C. Armature copper loss','D. Field copper loss'],answer:'C',selected:null},
-  {id:5,text:'The voltage regulation of a DC shunt generator is defined as:',choices:['A.  Change in speed from no-load to full-load','B. Ratio of generated emf to terminal voltage','C. Percentage change in terminal voltage from no-load to full-load','D. Ratio of load current to field current'],answer:'C',selected:null},
-  {id:6,text:'Main function of DC generator is:',choices:['A) Convert electrical→mechanical','B) Convert mechanical→electrical','C) Step up voltage','D) Step down current'],answer:'B',selected:null},
-  {id:7,text:'Field winding of DC shunt generator is connected:',choices:['A) In series','B) In parallel','C) Across load','D) In series with load'],answer:'B',selected:null},
-  {id:8,text:'Generated emf in DC generator:',choices:['A) E=V+IaRa','B) E=kΦN','C) E=V/I','D) E=P/I'],answer:'B',selected:null},
-  {id:9,text:'Armature reaction causes:',choices:['A) Increase flux','B) Decrease flux','C) No effect','D) Constant emf'],answer:'B',selected:null},
-  {id:10,text:'Load characteristic of DC shunt generator is:',choices:['A) Ia–If','B) V–IL','C) IL–speed','D) torque–speed'],answer:'B',selected:null},
-  {id:11,text:'As load current increases terminal voltage:',choices:['A) Increases','B) Decreases','C) Constant','D) Zero'],answer:'B',selected:null},
-  {id:12,text:'Drop in terminal voltage due to:',choices:['A) Armature reaction + resistance','B) Commutator resistance','C) Eddy current','D) Field resistance'],answer:'A',selected:null},
-  {id:13,text:'Residual magnetism needed for:',choices:['A) Commutation','B) Self-excitation','C) Speed control','D) Field regulation'],answer:'B',selected:null},
-  {id:14,text:'OCC curve represents:',choices:['A) V vs If (constant speed)','B) V vs IL','C) I vs R','D) torque vs speed'],answer:'A',selected:null},
-  {id:15,text:'Internal characteristic shows:',choices:['A) Eg–If','B) V–If','C) Eg–Ia','D) V–Ia'],answer:'C',selected:null},
-  {id:16,text:'External characteristic shows:',choices:['A) Eg–If','B) V–IL','C) Eg–Ia','D) torque–speed'],answer:'B',selected:null},
-  {id:17,text:'Losses in DC generator:',choices:['A) Copper','B) Iron','C) Mechanical','D) All'],answer:'D',selected:null},
-  {id:18,text:'Load test determines:',choices:['A) Armature efficiency','B) Speed regulation','C) Load characteristics','D) Field efficiency'],answer:'C',selected:null},
-  {id:19,text:'Field current in DC shunt generator is:',choices:['A) Constant','B) Depends on speed','C) Depends on load','D) Zero'],answer:'C',selected:null},
-  {id:20,text:'Terminal voltage at full load:',choices:['A) = Eg','B) > Eg','C) < Eg','D) Independent'],answer:'C',selected:null},
+  {id:1,text:'Spatial sampling in digital imaging determines the number of:',choices:['A. pixels','B. colors','C. formulas','D. filters'],answer:'A',selected:null},
+  {id:2,text:'What happens when the sampling rate is reduced?',choices:['A. sharper image','B. more pixelation','C. more tones','D. higher bit depth'],answer:'B',selected:null},
+  {id:3,text:'Quantization maps each image sample to a:',choices:['A. continuous curve','B. discrete intensity level','C. edge value','D. color channel'],answer:'B',selected:null},
+  {id:4,text:'8-bit quantization produces how many grayscale levels?',choices:['A. 128','B. 192','C. 256','D. 512'],answer:'C',selected:null},
+  {id:5,text:'Posterization is caused by too few:',choices:['A. pixels','B. quantization levels','C. filters','D. channels'],answer:'B',selected:null},
+  {id:6,text:'A single sampled point in a digital image is called a:',choices:['A. pixel','B. sample','C. vector','D. cluster'],answer:'A',selected:null},
+  {id:7,text:'Aliasing appears when sampling is too:',choices:['A. low','B. high','C. smooth','D. quantized'],answer:'A',selected:null},
+  {id:8,text:'Reducing quantization levels typically produces:',choices:['A. sharper detail','B. smoother gradients','C. visible banding','D. higher contrast'],answer:'C',selected:null},
+  {id:9,text:'The sampling grid defines the image:',choices:['A. pixel layout','B. color palette','C. compression ratio','D. contrast'],answer:'A',selected:null},
+  {id:10,text:'Increasing image resolution usually increases:',choices:['A. file size','B. noise','C. quantization error','D. compression loss'],answer:'A',selected:null},
+  {id:11,text:'With more quantization levels, an image becomes:',choices:['A. more posterized','B. smoother','C. darker','D. blurrier'],answer:'B',selected:null},
+  {id:12,text:'Very few sampling points make the image appear:',choices:['A. smooth','B. sharp','C. blocky','D. continuous'],answer:'C',selected:null},
+  {id:13,text:'The first step in converting an analog image to digital is:',choices:['A. quantization','B. compression','C. sampling','D. filtering'],answer:'C',selected:null},
+  {id:14,text:'A 4-bit grayscale image can represent how many levels?',choices:['A. 4','B. 8','C. 16','D. 32'],answer:'C',selected:null},
+  {id:15,text:'To reduce posterization, you should:',choices:['A. lower sampling','B. increase levels','C. decrease brightness','D. use more contrast'],answer:'B',selected:null},
+  {id:16,text:'A staircase pattern in a gradient is called:',choices:['A. aliasing','B. banding','C. moire','D. dithering'],answer:'B',selected:null},
+  {id:17,text:'Sampling frequency is analogous to:',choices:['A. pixel pitch','B. hue range','C. gamma','D. exposure time'],answer:'A',selected:null},
+  {id:18,text:'Quantization error occurs because intensity is stored in:',choices:['A. discrete levels','B. continuous form','C. vector space','D. logarithmic scale'],answer:'A',selected:null},
+  {id:19,text:'More pixels in a photo means higher:',choices:['A. color depth','B. spatial resolution','C. compression','D. brightness'],answer:'B',selected:null},
+  {id:20,text:'The key steps for image digitization are:',choices:['A. sampling and quantization','B. filtering and compression','C. encoding and transmission','D. scaling and clipping'],answer:'A',selected:null},
 ];
 
 /* ------------------ SETTINGS ------------------ */

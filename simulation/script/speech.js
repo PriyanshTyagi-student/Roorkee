@@ -468,7 +468,7 @@ const LAB_VOICE_CATALOG = [
   // },
   {
     key: "guide_starter_on",
-    text: "Select the number of bulbs from the lamp load.",
+    text: "Select sample size and quantization levels for the simulation.",
     audio: "./audio/guide_starter_on.wav"
   },
   {
@@ -524,7 +524,7 @@ const LAB_VOICE_CATALOG = [
   },
   {
     key: "before_add_table_select_bulbs",
-    text: "Select the number of bulbs first.",
+    text: "Select sample size and quantization levels first.",
     audio: "./audio/before_add_table_select_bulbs.wav"
   },
   {

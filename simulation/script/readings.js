@@ -922,11 +922,11 @@ tr:nth-child(even) { background-color: #f8fbff; }
 
     <div class="section report-overview">
       <div class="report-overview-top">
-        <p class="badge">Electrical Machines Lab</p>
+        <p class="badge">Image Processing Lab</p>
         <p class="report-stamp">Generated on ${reportDateText}</p>
       </div>
       <p class="report-experiment-label">Experiment Title</p>
-      <p class="report-experiment-title">To Study the Load Characteristics of a DC Shunt Generator</p>
+      <p class="report-experiment-title">To demonstrate and understand image sampling and quantization</p>
       <div class="info-grid">
           <div class="info-card"><span class="label">Start Time:</span><br>${startTimeText}</div>
           <div class="info-card"><span class="label">End Time:</span><br>${endTimeText}</div>
@@ -937,22 +937,18 @@ tr:nth-child(even) { background-color: #f8fbff; }
     <div class="section">
       <h2>Summary</h2>
       <h3>Aim</h3>
-      <p style="text-align:justify;">To study the load characteristics of a DC shunt generator by varying the lamp load, measuring terminal voltage and load current, and plotting the V-I characteristic curve.</p>
+      <p style="text-align:justify;">The aim of this experiment is to demonstrate and understand the processes of image sampling and quantization.</p>
 
       <h3>Simulation Summary</h3>
-      <p style="text-align:justify;">The circuit connections were completed as per the procedure. The supply was switched on, the lamp load was varied step by step, the corresponding load current and terminal voltage readings were recorded, and the load characteristic graph was plotted.</p>
+      <p style="text-align:justify;">A synthetic image was sampled at varying spatial resolutions and quantized to a reduced set of gray levels. The resulting sampled-and-quantized images were compared to observe the effects of sampling rate and quantization on image fidelity.</p>
 
       <h3>Components and Key Parameters</h3>
       <ul class="two-column-list">
-        <li>MCB</li>
-        <li>3-Point Starter: 220 V DC, 7.5 HP</li>
-        <li>DC Shunt Motor: 5 HP, 220 V DC, 19 A (max), 1500 RPM</li>
-        <li>DC Shunt Generator: 3 kW, 220 V DC, 1500 RPM</li>
-        <li>Load Type: Resistive Lamp Load</li>
-        <li>Bulbs: 10 x 200 W each</li>
-        <li>DC Voltmeter: 0-420 V</li>
-        <li>DC Ammeter: 0-30 A</li>
-        <li>Connecting Leads</li>
+        <li>Source Image (synthetic test pattern)</li>
+        <li>Source Canvas</li>
+        <li>Output Canvas</li>
+        <li>Sampling Grid / Sample Size</li>
+        <li>Gray-level Quantizer (number of levels)</li>
       </ul>
     </div>
   </div>

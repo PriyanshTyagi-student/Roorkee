@@ -1221,7 +1221,7 @@ function setupJsPlumb() {
     window.addEventListener(STARTER_MOVED_EVENT, function () {
       if (!guideActive) return;
       speakGuide(
-        buildVoicePayload("guide_starter_on", "Select the number of bulbs from the lamp load.")
+        buildVoicePayload("guide_starter_on", "Select sample size and quantization levels for the simulation.")
       );
     });
   })();
