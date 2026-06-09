@@ -733,68 +733,80 @@
 
       <!-- Theory Content -->
 <section class="section-content vl-card p-6 animate-fadeInUp">
-
   <div class="space-y-8 text-gray-700 text-lg leading-relaxed">
 
     <div>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Sample and Quantization</h2>
+
       <h3 class="text-xl font-semibold mb-4 text-gray-800">Introduction</h3>
       <p class="mb-6 text-justify">
-        Digital image formation begins with sampling a continuous scene and quantizing each sample into a finite number of brightness values. Sampling determines the image resolution by choosing a grid of pixels, while quantization decides how many shades each pixel can represent.
+        The digital representation of images is fundamental to numerous applications, including medical imaging, satellite photography, remote sensing, and computer vision. The process of converting a continuous analog image into a digital format involves two crucial steps:
       </p>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-gray-200 bg-slate-50 p-5">
-          <h4 class="text-lg font-semibold text-gray-800 mb-3">Sampling</h4>
-          <p class="text-gray-700">
-            Sampling divides the continuous image into a regular grid of discrete pixels. A higher sampling rate captures more detail and produces smaller pixels, while a lower sampling rate creates larger pixels and a blockier appearance.
-          </p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 bg-slate-50 p-5">
-          <h4 class="text-lg font-semibold text-gray-800 mb-3">Quantization</h4>
-          <p class="text-gray-700">
-            Quantization maps each sampled value to one of a limited set of intensity levels. Reducing the number of levels makes the image appear posterized, while increasing the levels preserves smoother tonal transitions.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Sampling Rate and Spatial Resolution</h3>
-      <p class="mb-6 text-justify">
-        The sampling rate is the number of pixels used to represent the image in the horizontal and vertical directions. It determines how much spatial detail the digital image retains. If the sampling rate is too low, the image may lose fine features and exhibit aliasing artifacts.
-      </p>
-      <ul class="list-disc pl-6 space-y-2 text-gray-700">
-        <li>High sampling rate: smaller pixels, more accurate detail, and smoother edges.</li>
-        <li>Low sampling rate: larger pixels, coarse detail, and visible pixelation.</li>
+      <ol class="list-decimal pl-6 space-y-2 mb-6 text-gray-700">
+        <li><strong>Sampling:</strong> it refers to selecting discrete points from the continuous image to create a digital representation.</li>
+        <li><strong>Quantization:</strong> it involves mapping a range of intensity values to a limited number of discrete levels, reducing the data required for storage and processing.</li>
+      </ol>
+      <figure class="mb-6 text-center">
+        <img src="https://vlab.iitr.ac.in/assets/explore-labs/ImageProcessing/labs/exp1/images/s&q.png" alt="Visual representation of image sampling and quantization" class="mx-auto rounded-xl border border-gray-200 shadow-sm" />
+        <figcaption class="mt-2 text-sm text-gray-600">Fig. 1 Visual representation of image sampling and quantization</figcaption>
+      </figure>
+      <ul class="list-disc pl-6 space-y-2 mb-6 text-gray-700">
+        <li><strong>Top row:</strong> Shows how reducing the sampling rate (higher sampling factor) affects image resolution. As the factor increases, image details are lost.</li>
+        <li><strong>Bottom row:</strong> Displays the impact of reducing quantization levels (bit depth). With fewer levels, the image becomes more posterized, losing smooth transitions in shades.</li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Gray-Level Quantization</h3>
-      <p class="mb-6 text-justify">
-        Quantization assigns each sampled pixel an intensity from a finite set of levels. For a grayscale image, an 8-bit quantizer produces 256 levels from black to white. If the number of levels is reduced, the image may show visible bands of uniform tone.
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Image Sampling</h3>
+      <p class="mb-4 text-justify">
+        Sampling is the process of converting a continuous-tone image into a discrete form by selecting a finite number of points, called pixels. The sampling process directly affects the spatial resolution of the digital image.
       </p>
-      <div class="text-center text-lg font-mono my-6 bg-gray-100 p-4 rounded-lg">
-        Quantized value = round(original_value × (L − 1)) / (L − 1)
-      </div>
-      <p class="mb-6 text-justify">
-        Here, L is the number of quantization levels. More levels preserve detail, while fewer levels cause tonal distortion and posterization.
-      </p>
+      <ol class="list-decimal pl-6 space-y-2 mb-6 text-gray-700">
+        <li><strong>Spatial Resolution and Sampling Rate:</strong> Spatial resolution defines the number of pixels used to represent an image. The sampling rate determines how frequently pixels are taken from the continuous image. A higher sampling rate results in finer details and better quality, whereas a lower sampling rate may lead to loss of critical image information.</li>
+        <li><strong>The Nyquist Sampling Theorem:</strong> To accurately represent an image without introducing distortions, the Nyquist theorem states that the sampling frequency should be at least twice the highest frequency present in the image. If the sampling rate is too low, high-frequency components will be misrepresented as lower frequencies, leading to aliasing artifacts.</li>
+        <li><strong>Aliasing and Its Effects:</strong> Aliasing occurs when the sampling rate is insufficient to capture the high-frequency details in an image, resulting in distortions such as Moiré patterns, jagged edges, and loss of fine details.</li>
+      </ol>
+      <figure class="mb-6 text-center">
+        <img src="https://vlab.iitr.ac.in/assets/explore-labs/ImageProcessing/labs/exp1/images/sampling.png" alt="Sampling and quantization illustration" class="mx-auto rounded-xl border border-gray-200 shadow-sm" />
+        <figcaption class="mt-2 text-sm text-gray-600">Fig. 2 Generating a digital image (a) Continuous image (b) A scan line from A to B in the continuous image, used to illustrate the concepts of sampling and quantization (c) Sampling and Quantization (d) Digital scan line</figcaption>
+      </figure>
     </div>
 
     <div>
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Effects on Image Quality</h3>
-      <p class="mb-6 text-justify">
-        The combination of sampling and quantization determines how faithfully the digital image represents the original scene. Both processes affect the final image quality and storage requirements.
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Image Quantization</h3>
+      <p class="mb-4 text-justify">
+        Quantization is the process of reducing the number of distinct intensity levels in an image, converting a continuous range of values into a finite set.
       </p>
+      <ol class="list-decimal pl-6 space-y-2 mb-6 text-gray-700">
+        <li><strong>Quantization Levels and Bit Depth:</strong> The number of quantization levels defines how accurately pixel intensities are represented. The bit depth of an image refers to the number of bits used to store the intensity of each pixel.</li>
+        <li><strong>Effects of Quantization:</strong> Higher Quantization Levels → More accurate intensity representation, higher quality, but larger file size.</li>
+        <li><strong>Lower Quantization Levels:</strong> Reduces file size but can cause visual artifacts such as false contouring and loss of detail.</li>
+      </ol>
+      <figure class="mb-6 text-center">
+        <img src="https://vlab.iitr.ac.in/assets/explore-labs/ImageProcessing/labs/exp1/images/continuos.jpg" alt="Continuous image projected onto sensor array and result of sampling and quantization" class="mx-auto rounded-xl border border-gray-200 shadow-sm" />
+        <figcaption class="mt-2 text-sm text-gray-600">Fig. 3 (a) Continuous image projected onto a sensor array (b) Result of image sampling and quantization.</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Applications of Image Sampling and Quantization</h3>
       <ul class="list-disc pl-6 space-y-2 text-gray-700">
-        <li>Sampling artifacts appear as jagged edges, missing detail, or aliasing when the resolution is too low.</li>
-        <li>Quantization artifacts appear as visible steps or bands in smooth gradients when the level count is too low.</li>
-        <li>A balanced design uses enough samples and levels to represent the image accurately while minimizing data size.</li>
+        <li>Medical Imaging - Ensures accurate diagnosis while minimizing storage and processing requirements.</li>
+        <li>Image Compression - Used in JPEG and PNG formats to optimize storage without significant quality loss.</li>
+        <li>Computer Vision and AI - Properly sampled and quantized images improve object detection and machine learning accuracy.</li>
+        <li>Remote Sensing - Satellite images require high-resolution sampling for climate monitoring and urban planning.</li>
       </ul>
     </div>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Conclusion</h3>
+      <p class="mb-6 text-justify">
+        Image sampling and quantization are essential steps in digital image processing that impact resolution, storage efficiency, and visual quality. Proper selection of sampling rates and quantization levels ensures a balance between image fidelity and computational efficiency, benefiting diverse fields such as medical imaging, AI, remote sensing, and digital media.
+      </p>
+    </div>
+
 
   </div>
-
 </section>
    <section id="progressreport" class="section-content vl-card mb-8 p-6 animate-fadeInUp hidden">
           <div class="border-l-4 border-orange-600 pl-4 mb-4 flex items-center justify-between">

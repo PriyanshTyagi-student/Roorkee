@@ -1004,9 +1004,7 @@
 
       return html
         .replace(/(<\/(:?span|strong|b|em)>)(?=[A-Za-z0-9])/g, "$1 ")
-        .replace(/text-align\s*:\s*justify\s*;?/gi, "text-align:left;")
-        .replace(/To study the Load Characteristics of DC shunt generator/gi, "To demonstrate and understand image sampling and quantization")
-        .replace(/To study the external characteristic of a DC shunt generator[\s\S]*?plotting the terminal voltage versus load current[^<]*/gi, "To demonstrate image sampling and quantization by varying resolution and gray-level depth, observing how the output changes as the pixel grid and intensity levels change.");
+        .replace(/text-align\s*:\s*justify\s*;?/gi, "text-align:left;");
     }
 
     function getSimulationReportData() {

@@ -739,7 +739,6 @@
       </div>
       <!-- Theory Questions -->
       <section class="section-content vl-card p-6 animate-fadeInUp">
-     
         <div id="mcq-container" class="space-y-6 text-gray-700 text-lg"></div>
 <!-- Controls: Refresh + Check (LEFT SIDE) -->
 <div class="mt-6 flex items-center gap-3">
@@ -810,26 +809,11 @@
 <script>
 /* ------------------ 20 QUESTIONS ------------------ */
  const questions = [
-  {id:1,text:'Spatial sampling in digital imaging determines the number of:',choices:['A. pixels','B. colors','C. formulas','D. filters'],answer:'A',selected:null},
-  {id:2,text:'What happens when the sampling rate is reduced?',choices:['A. sharper image','B. more pixelation','C. more tones','D. higher bit depth'],answer:'B',selected:null},
-  {id:3,text:'Quantization maps each image sample to a:',choices:['A. continuous curve','B. discrete intensity level','C. edge value','D. color channel'],answer:'B',selected:null},
-  {id:4,text:'8-bit quantization produces how many grayscale levels?',choices:['A. 128','B. 192','C. 256','D. 512'],answer:'C',selected:null},
-  {id:5,text:'Posterization is caused by too few:',choices:['A. pixels','B. quantization levels','C. filters','D. channels'],answer:'B',selected:null},
-  {id:6,text:'A single sampled point in a digital image is called a:',choices:['A. pixel','B. sample','C. vector','D. cluster'],answer:'A',selected:null},
-  {id:7,text:'Aliasing appears when sampling is too:',choices:['A. low','B. high','C. smooth','D. quantized'],answer:'A',selected:null},
-  {id:8,text:'Reducing quantization levels typically produces:',choices:['A. sharper detail','B. smoother gradients','C. visible banding','D. higher contrast'],answer:'C',selected:null},
-  {id:9,text:'The sampling grid defines the image:',choices:['A. pixel layout','B. color palette','C. compression ratio','D. contrast'],answer:'A',selected:null},
-  {id:10,text:'Increasing image resolution usually increases:',choices:['A. file size','B. noise','C. quantization error','D. compression loss'],answer:'A',selected:null},
-  {id:11,text:'With more quantization levels, an image becomes:',choices:['A. more posterized','B. smoother','C. darker','D. blurrier'],answer:'B',selected:null},
-  {id:12,text:'Very few sampling points make the image appear:',choices:['A. smooth','B. sharp','C. blocky','D. continuous'],answer:'C',selected:null},
-  {id:13,text:'The first step in converting an analog image to digital is:',choices:['A. quantization','B. compression','C. sampling','D. filtering'],answer:'C',selected:null},
-  {id:14,text:'A 4-bit grayscale image can represent how many levels?',choices:['A. 4','B. 8','C. 16','D. 32'],answer:'C',selected:null},
-  {id:15,text:'To reduce posterization, you should:',choices:['A. lower sampling','B. increase levels','C. decrease brightness','D. use more contrast'],answer:'B',selected:null},
-  {id:16,text:'A staircase pattern in a gradient is called:',choices:['A. aliasing','B. banding','C. moire','D. dithering'],answer:'B',selected:null},
-  {id:17,text:'Sampling frequency is analogous to:',choices:['A. pixel pitch','B. hue range','C. gamma','D. exposure time'],answer:'A',selected:null},
-  {id:18,text:'Quantization error occurs because intensity is stored in:',choices:['A. discrete levels','B. continuous form','C. vector space','D. logarithmic scale'],answer:'A',selected:null},
-  {id:19,text:'More pixels in a photo means higher:',choices:['A. color depth','B. spatial resolution','C. compression','D. brightness'],answer:'B',selected:null},
-  {id:20,text:'The key steps for image digitization are:',choices:['A. sampling and quantization','B. filtering and compression','C. encoding and transmission','D. scaling and clipping'],answer:'A',selected:null},
+  {id:1,text:'What are the two main steps involved in converting an analog image to a digital image?',choices:['a) Compression and Transmission','b) Sampling and Quantization','c) Filtering and Sharpening','d) Resizing and Cropping'],answer:'b',selected:null},
+  {id:2,text:'According to the Nyquist theorem, the sampling frequency should be:',choices:['a) Equal to the lowest frequency of the image','b) Less than the highest frequency of the image','c) Twice the highest frequency of the image','d) Half the highest frequency of the image'],answer:'c',selected:null},
+  {id:3,text:'Which of the following is a consequence of low quantization levels?',choices:['a) More accurate intensity representation','b) Better image detail','c) False contouring and visible artifacts','d) Increase in bit depth'],answer:'c',selected:null},
+  {id:4,text:'What does bit depth in an image represent?',choices:['a) Image size in megabytes','b) Image width and height in pixels','c) Number of bits used to represent spatial resolution','d) Number of bits used per pixel to represent intensity'],answer:'d',selected:null},
+  {id:5,text:'What does a higher sampling rate result in?',choices:['a) Loss of detail','b) More compression','c) Lower resolution','d) Better image quality'],answer:'d',selected:null},
 ];
 
 /* ------------------ SETTINGS ------------------ */
@@ -991,34 +975,16 @@ function persistAssessmentTotals() {
 
 persistAssessmentTotals();
 
-/* ------------------ UTIL: pick random unique set ------------------ */
+/* ------------------ UTIL: show all five questions in order ------------------ */
 function pickRandomSet() {
-  const remainingIndices = questions
-    .map((question, index) => attemptedQuestionIds.has(getQuestionAttemptKey(question.id)) ? null : index)
-    .filter((index) => index !== null);
+  const indices = Array.from({ length: Math.min(size, questions.length) }, (_, i) => i);
 
-  // Fisher-Yates shuffle on index array, then slice first `size`
-  const indices = remainingIndices.length
-    ? [...remainingIndices]
-    : Array.from({ length: questions.length }, (_, i) => i);
-
-  for (let i = indices.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [indices[i], indices[j]] = [indices[j], indices[i]];
-  }
-
-  currentSetIndices = indices.slice(0, Math.min(size, indices.length));
+  currentSetIndices = indices;
   currentSetIndices.forEach(idx => questions[idx].selected = null);
   setLocked = false;
   showPage();
 
-  if (hasRenderedSet) {
-    if (remainingIndices.length) {
-      showPopup("Questions refreshed. A new set has been loaded.", "Refreshed");
-    } else {
-      showPopup("All 20 questions have already been counted. Overall marks will remain out of 20.", "Completed");
-    }
-  } else {
+  if (!hasRenderedSet) {
     hasRenderedSet = true;
   }
 }

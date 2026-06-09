@@ -739,7 +739,6 @@
       </div>
       <!-- Theory Questions -->
       <section class="section-content vl-card p-6 animate-fadeInUp">
-     
         <div id="mcq-container" class="space-y-6 text-gray-700 text-lg"></div>
 
 <!-- Controls: Refresh + Check (LEFT SIDE) -->
@@ -812,26 +811,11 @@
 <script>
 /* ------------------ 20 QUESTIONS ------------------ */
 const questions = [
-  {id:1,text:'When sampling is doubled in both directions, the total pixel count becomes:',choices:['A: twice','B: four times','C: eight times','D: unchanged'],answer:'B',selected:null},
-  {id:2,text:'Which quantization level is least likely to produce banding?',choices:['A: 16','B: 32','C: 64','D: 256'],answer:'D',selected:null},
-  {id:3,text:'An image with low sampling rate and high quantization levels is likely:',choices:['A: blurry and banded','B: blocky but smooth-toned','C: sharp and noisy','D: high resolution'],answer:'B',selected:null},
-  {id:4,text:'1-bit grayscale quantization produces:',choices:['A: black and white only','B: 4 gray levels','C: 8 gray levels','D: 16 gray levels'],answer:'A',selected:null},
-  {id:5,text:'Spatial resolution is most closely related to:',choices:['A: pixel count','B: brightness','C: color depth','D: contrast'],answer:'A',selected:null},
-  {id:6,text:'Which component does quantization directly affect?',choices:['A: pixel layout','B: intensity levels','C: sampling grid','D: file format'],answer:'B',selected:null},
-  {id:7,text:'Converting 256 gray levels to 8 levels increases:',choices:['A: detail','B: noise','C: banding','D: saturation'],answer:'C',selected:null},
-  {id:8,text:'Sampling below the Nyquist rate in images causes:',choices:['A: aliasing','B: posterization','C: dithering','D: compression artifacts'],answer:'A',selected:null},
-  {id:9,text:'Doubling the horizontal and vertical sampling resolution makes the image:',choices:['A: 2× bigger','B: 4× bigger','C: 8× bigger','D: unchanged'],answer:'B',selected:null},
-  {id:10,text:'Increasing sampling with fixed quantization levels typically:',choices:['A: improves detail and smoothness','B: improves detail but tonal steps remain','C: worsens image','D: reduces resolution'],answer:'B',selected:null},
-  {id:11,text:'Higher quantization depth results in:',choices:['A: fewer tones','B: smoother gradients','C: lower contrast','D: smaller file size'],answer:'B',selected:null},
-  {id:12,text:'Lower sampling density usually yields a:',choices:['A: smoother image','B: sharper image','C: blocky image','D: more accurate image'],answer:'C',selected:null},
-  {id:13,text:'The first step in digitizing an image is:',choices:['A: compression','B: quantization','C: sampling','D: color correction'],answer:'C',selected:null},
-  {id:14,text:'A 4-bit image can represent how many distinct brightness levels?',choices:['A: 4','B: 8','C: 16','D: 32'],answer:'C',selected:null},
-  {id:15,text:'To reduce visible bands in a gradient, you should:',choices:['A: decrease sampling','B: increase quantization levels','C: lower contrast','D: use fewer pixels'],answer:'B',selected:null},
-  {id:16,text:'Visible steps in a smooth gradient are called:',choices:['A: aliasing','B: banding','C: moiré','D: dithering'],answer:'B',selected:null},
-  {id:17,text:'A pixel represents a:',choices:['A: single sample value','B: color histogram','C: compression ratio','D: file header'],answer:'A',selected:null},
-  {id:18,text:'Higher bit-depth in imaging uses more:',choices:['A: spatial samples','B: quantization levels','C: edges','D: metadata'],answer:'B',selected:null},
-  {id:19,text:'Sampling and quantization are both necessary to convert:',choices:['A: digital to analog','B: analog to digital','C: JPEG to PNG','D: color to grayscale'],answer:'B',selected:null},
-  {id:20,text:'The primary result of this experiment is:',choices:['A: an analog signal','B: a printed photograph','C: a digital image','D: a color palette'],answer:'C',selected:null},
+  {id:1,text:'What is the primary consequence of reducing the sampling rate in an image?',choices:['A) Reduced file size','B) Increased bit depth','C) Loss of image details and resolution','D) Improved spatial resolution'],answer:'C',selected:null},
+  {id:2,text:'Which of the following best describes quantization in digital image processing?',choices:['A) Selecting points from a continuous image','B) Increasing the spatial resolution','C) Mapping a continuous range of values into discrete levels','D) Filtering out noise from an image'],answer:'C',selected:null},
+  {id:3,text:'According to the Nyquist theorem, the sampling frequency should be:',choices:['A) Equal to the image’s highest frequency','B) Half the image’s highest frequency','C) Double the image’s highest frequency','D) Irrelevant to the image frequency'],answer:'C',selected:null},
+  {id:4,text:'Bit depth in an image defines:',choices:['A) The number of pixels per inch','B) The number of sampling points in an image','C) The image file format','D) The number of bits used per pixel to represent intensity'],answer:'D',selected:null},
+  {id:5,text:'Why is image quantization important in compression algorithms like JPEG?',choices:['A) It increases the number of colors in the image','B) It reduces the amount of data by simplifying intensity levels','C) It sharpens the image','D) It improves edge detection'],answer:'B',selected:null},
 ];
 
 /* ------------------ SETTINGS ------------------ */
